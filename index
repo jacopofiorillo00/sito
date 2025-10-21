@@ -3,37 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il mio primo sito</title>
+  <title>Apicoltura Dolce Vita 🍯</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #fffaf2;
       color: #333;
+      line-height: 1.6;
     }
-    h1 {
-      color: #0077cc;
-      margin-top: 50px;
-    }
-    p {
-      font-size: 18px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #0077cc;
+
+    header {
+      background: linear-gradient(45deg, #f6c90e, #f0a500);
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
-    button:hover {
-      background-color: #005fa3;
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1.1em;
+    }
+
+    nav {
+      background-color: #fff2cc;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #5a3e1b;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1615486362901-845babea5d74?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.8em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 15px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: #d48806;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 15px;
+      color: #5a3e1b;
+    }
+
+    .card p {
+      padding: 0 15px 15px;
+    }
+
+    footer {
+      background-color: #f0a500;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      .hero h2 {
+        font-size: 2em;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Ciao! 👋</h1>
-  <p>Questo è il mio primo sito web, creato gratis con GitHub Pages.</p>
-  <button onclick="alert('Hai cliccato il pulsante! 🎉')">Cliccami!</button>
+  <header>
+    <h1>Apicoltura Dolce Vita</h1>
+    <p>Il mondo del miele, delle api e della natura 🍯🐝</p>
+  </header>
+
+  <nav>
+    <a href="#miele">Il Miele</a>
+    <a href="#api">Le Api</a>
+    <a href="#prodotti">I Nostri Prodotti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+
+  <div class="hero">
+    <h2>Scopri il meraviglioso mondo delle api</h2>
+    <p>Dalla natura alla tavola: il viaggio del miele</p>
+  </div>
+
+  <section id="miele">
+    <h2>🌼 Il Miele</h2>
+    <p>
+      Il miele è un dono prezioso che le api ci offrono dopo un lungo lavoro.  
+      Ogni goccia racchiude il profumo dei fiori, il calore del sole e la purezza della natura.  
+      Esistono molti tipi di miele: millefiori, acacia, castagno, tiglio, e ognuno racconta un territorio diverso.
+    </p>
+  </section>
+
+  <section id="api">
+    <h2>🐝 Le Api</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1589883661927-7a6f5a1b5a08?auto=format&fit=crop&w=600&q=80" alt="Ape sul fiore">
+        <h3>La vita nell'alveare</h3>
+        <p>Ogni ape ha un ruolo: operaia, fucaiolo o regina. Insieme formano un perfetto equilibrio naturale.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?auto=format&fit=crop&w=600&q=80" alt="Alveare">
+        <h3>La produzione del miele</h3>
+        <p>Dal nettare dei fiori al miele nei favi, le api lavorano instancabilmente per creare oro liquido.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1508450859948-3bd49473002f?auto=format&fit=crop&w=600&q=80" alt="Favo di miele">
+        <h3>Importanza ecologica</h3>
+        <p>Le api sono fondamentali per l'impollinazione e la biodiversità. Proteggerle significa proteggere il pianeta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="prodotti">
+    <h2>🍯 I Nostri Prodotti</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1505577058444-a3dab90d4253?auto=format&fit=crop&w=600&q=80" alt="Miele di acacia">
+        <h3>Miele di Acacia</h3>
+        <p>Delicato e limpido, perfetto per dolcificare tè e tisane.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1603203179329-38152f828b06?auto=format&fit=crop&w=600&q=80" alt="Miele millefiori">
+        <h3>Millefiori</h3>
+        <p>Un concentrato di aromi floreali che raccontano la stagione e i campi da cui proviene.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1615486362901-845babea5d74?auto=format&fit=crop&w=600&q=80" alt="Miele di castagno">
+        <h3>Miele di Castagno</h3>
+        <p>Dal sapore intenso e deciso, ideale per formaggi stagionati e carni.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti">
+    <h2>📬 Contatti</h2>
+    <p>Vuoi saperne di più o acquistare i nostri prodotti?</p>
+    <p>Scrivici a <a href="mailto:info@apicolturadolcevita.it">info@apicolturadolcevita.it</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Apicoltura Dolce Vita — Creato con 💛 e passione per le api.</p>
+  </footer>
 </body>
 </html>
